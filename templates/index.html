@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pharma</title>
+        <link rel="icon" href="static\img\logo_icono.png">
+        <link rel="font" href="baronneu">
+        <script src="https://kit.fontawesome.com/8efb435a74.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="static\css\styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bungee+Shade&family=Fredoka+One&family=Indie+Flower&family=Jost:wght@100&family=Vast+Shadow&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navegador">
+                    <img src="static\img\Logo_header.png" id="logo">
+                    <a href="{{ url_for('index') }}"><i class="fa-solid fa-plus"></i> INICIO</a>
+                    <a href="{{ url_for('products') }}"><i class="fa-solid fa-plus"></i> PRODUCTOS</a>
+                    <a href="{{ url_for('news') }}"><i class="fa-solid fa-plus"></i> NOTICIAS</a>
+                    <a href="{{ url_for('contact') }}"><i class="fa-solid fa-plus"></i> CONTACTO</a>
+                    <a href="{{ url_for('login') }}"><i class="fa-solid fa-plus"></i> INGRESAR</a>
+                 </div>
+            </nav>
+        </header>
+        <main>
+            <div class="inicio">
+                <img src="static\img\portada.jpg" alt="">
+            </div>
+            <section class="medios">
+                <div>
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>ENVIOS A TODO EL PAÍS</h3>
+                    <p>Transporte local y envio por correo</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <h3>TARJETA DE DÉBITO Y CRÉDITO</h3>
+                    <p>Efectivo y transferencia</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <h3>CANALES DE COMUNICACION</h3>
+                    <P>Telefono, formulario de contacto.</P>
+                </div>
+            </section>
+
+            <section class="container">
+                <div>
+                    <i class="fa-solid fa-archive"></i>
+                    <h3>PRODUCTOS</h3>
+                    <p>Tenemos stock en medicamentos de los mejores laboratorios, articulos de higiene, perfumeria, bebes, regaleria.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>COMPROMISO</h3>
+                    <p>Nuestra prioridad es tu salud, te acercamos la mejor oferta del mercado, con todos los medios de pago disponible y promociones.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-info"></i>
+                    <h3>INFORMACION</h3>
+                    <p>Nos interesa ayudar a la sociedad, encontra aqui todas las novedades referidas a la salud que necesitas conocer para tu familia.</p>
+                </div>
+            </section>
+            <section>
+                <div class="faq">
+                    <h2>PREGUNTAS FRECUENTES</h2>
+                    <p>Respondemos a las consultas más frecuentes que recibimos.</p>
+                    <div class="container-faq">
+                        <button onclick="mostrar_ocultar('uno')"><h2>¿Hacen envíos?</h2></button>
+                        <div id="uno">
+                            <p>Si, para adquirir uno o varios productos en nuestro punto de entrega en Avellaneda, o coordinar un envío vía moto-mensajería dentro de CABA (en el día o de un día para el otro)  y si estás en el interior te lo enviamos por Correo Argentino u otro expreso (Consultar previamente).</p>
+                        </div>
+                        <button onclick="mostrar_ocultar('dos')"><h2>¿Qué formas de pago aceptan?</h2></button>
+                        <div id="dos">
+                            <ul>
+                                <li>Efectivo</li>
+                                <li>Depósito/Transferencia Bancaria</li>
+                                <li>Tarjeta de debito y credito (VISA, MASTERCARD, NARANJA, AMERICAN EXPRESS)</li>
+                            </ul>
+                        </div>
+                        <button onclick="mostrar_ocultar('tres')"><h2>¿Pueden personalizar un pedido?</h2></button>
+                        <div id="tres">
+                            <p>Si, podemos armar un kit para la ocasion requerida y se ajuste a tus necesidades, ya sea un cumpleaños, una internacion, babyshower, etc.</p>
+                        </div>
+                        <button onclick="mostrar_ocultar('cuatro')"><h2>¿Cómo es el proceso de compra?</h2></button>
+                        <div id="cuatro">
+                            <p>Es muy sencillo! Lo difícil puede ser elegir entre todas nuestras preciosas, una vez que hayas decidido que taza querés, nos envias por contacto o a nuestro mail el diseño elegido, en el cual te vamos a pedir los datos para realizar la compra y posteriormente la entrega.</p>
+                        </div>
+                        <button onclick="mostrar_ocultar('cinco')"><h2>¿Me avisan el estado de mi compra?</h2></button>
+                        <div id="cinco">
+                            <p>Si, es importante tener la seguridad que todo haya salido bien, por eso una vez realizada la compra y completados los pasos vas a recibir un email nuestro confirmando que el pedido fue procesado con éxito.</p>
+                        </div>
+                        <button onclick="mostrar_ocultar('seis')"><h2>¿Cómo puedo cambiar mi pedido?</h2></button>
+                        <div id="seis">
+                            <p>Sin importar el motivo, tenés hasta 24 hs luego de recibir el pedido para realizar el cambio o devolución de tus productos.
+                                Podés realizarlo en nuestro punto de retiro en sucursal sin costo alguno. En caso de que el cambio requiera envío a domicilio, el costo del mismo correrá por cuenta del comprador
+                                Te pedimos que el cambio lo realices con los productos en su envoltorio correspondiente, en buenas condiciones y sin uso.</p>
+                        </div>
+                    </div>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <div class="redes">
+                <a href="https://www.facebook.com/Pharma/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com/Pharma/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/Pharma/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:pharma@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <div class="datos">
+                <p>Copyright 2024 © <b>Pharma</b> todos los derechos reservados</p>
+                <p>Diseñado por Rodrigo Matias Brizuela - Yoel Danilo Unzue - Melody Nahir Alvarez</p>
+                <p>Comision 24263 - Grupo 13</p>
+            </div>
+        </footer>
+        <script src="static\js\actions.js"></script>      
+    </body>
+</html>

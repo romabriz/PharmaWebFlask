@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Preguntas Frecuentes</title>
+        <link rel="icon" href="static\img\logo_icono.png">
+        <link rel="font" href="baronneu">
+        <script src="https://kit.fontawesome.com/8efb435a74.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="static\css\styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bungee+Shade&family=Fredoka+One&family=Indie+Flower&family=Jost:wght@100&family=Vast+Shadow&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navegador">
+                    <img src="static\img\Logo_header.png" id="logo">
+                    <a href="{{ url_for('index') }}"><i class="fa-solid fa-plus"></i> INICIO</a>
+                    <a href="{{ url_for('products') }}"><i class="fa-solid fa-plus"></i> PRODUCTOS</a>
+                    <a href="{{ url_for('news') }}"><i class="fa-solid fa-plus"></i> NOTICIAS</a>
+                    <a href="{{ url_for('contact') }}"><i class="fa-solid fa-plus"></i> CONTACTO</a>
+                    <a href="{{ url_for('login') }}"><i class="fa-solid fa-plus"></i> INGRESAR</a>
+                 </div>
+            </nav>
+        </header>
+    <main>
+        <section class="section-log">
+            <div class="container-log">
+                <div>
+                    <label for="user">USUARIO</label>
+                </div>
+                <div>
+                    <input class="control" type="text" name="user" id="user" maxlength="30">
+                </div>
+                <div>
+                    <label for="password">CONTRASEÑA</label>
+                </div>
+                <div>
+                    <input class="control" type="password" name="password" id="password" maxlength="30" >
+                </div>
+
+                <div>
+                    <a href="{{ url_for('CRUD')}}" class="vinculo" onclick="validarCampos(event)"><i class="fa-solid fa-plus"></i>INGRESAR</a>
+                </div>
+            </div>
+            
+        </section>  
+    </main>
+        <footer>
+            <div class="redes">
+                <a href="https://www.facebook.com/Pharma/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com/Pharma/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/Pharma/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:pharma@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <div class="datos">
+                <p>Copyright 2024 © <b>Pharma</b> todos los derechos reservados</p>
+                <p>Diseñado por Rodrigo Matias Brizuela - Yoel Danilo Unzue - Melody Nahir Alvarez</p>
+                <p>Comision 24263 - Grupo 13</p>
+            </div>
+        </footer> 
+        <script src="static\js\actions.js"></script>       
+    </body>
+</html>

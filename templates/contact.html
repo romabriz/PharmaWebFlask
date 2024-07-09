@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+        <link rel="icon" href="static\img\logo_icono.png">
+        <link rel="font" href="baronneu">
+        <script src="https://kit.fontawesome.com/8efb435a74.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="static\css\styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bungee+Shade&family=Fredoka+One&family=Indie+Flower&family=Jost:wght@100&family=Vast+Shadow&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navegador">
+                    <img src="static\img\Logo_header.png" id="logo">
+                    <a href="{{ url_for('index') }}"><i class="fa-solid fa-plus"></i> INICIO</a>
+                    <a href="{{ url_for('products') }}"><i class="fa-solid fa-plus"></i> PRODUCTOS</a>
+                    <a href="{{ url_for('news') }}"><i class="fa-solid fa-plus"></i> NOTICIAS</a>
+                    <a href="{{ url_for('contact') }}"><i class="fa-solid fa-plus"></i> CONTACTO</a>
+                    <a href="{{ url_for('login') }}"><i class="fa-solid fa-plus"></i> INGRESAR</a>
+                 </div>
+            </nav>
+        </header>
+        <section>
+            <form action="" name="formulario" method="post">
+                <h1>DEJANOS TU MENSAJE O CONSULTA</h1>
+                <div>
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div>
+                    <input class="control" type="text" name="nombre" id="nombre" maxlength="30">
+                </div>
+                <div>
+                    <label for="apellido">Apellido</label>
+                </div>
+                <div>
+                    <input class="control" type="text" name="apellido" id="apellido" maxlength="30" >
+                </div>
+                <div>
+                    <label for="provincia">Provincia</label> 
+                </div>
+                <div>
+                    <select class="control" id="provincia" name="provincia">
+                        <option value="Vacio">Seleccione una Provincia</option>
+                        <option value="San Juan">San Juan</option>
+                        <option value="Mendoza">Mendoza</option>
+                        <option value="Catamarca">Catamarca</option>
+                        <option value="Chaco">Chaco</option>
+                        <option value="Salta">Salta</option>
+                        <option value="Jujuy">Jujuy</option>
+                        <option value="Entre Rios">Entre Rios</option>
+                        <option value="Cordoba">Cordoba</option>
+                        <option value="Tucumán">Tucumán</option>
+                        <option value="Misiones">Misiones</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Tierra del Fuego">Tierra del Fuego</option>
+                        <option value="Neuquen">Neuquen</option>
+                        <option value="Santiago del Estero">Santiago del Estero</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                </div>
+                <div>
+                    <input class="control" type="text" name="email" id="email">
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                </div>
+                <div>
+                    <textarea class="control" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese aqui su mensaje"></textarea>
+                </div>
+                <div>
+                    <label for="check"><p>¿Cómo nos conoció?</p></label>
+                </div>
+                <div>
+                    <input class="opcion" type="radio" name="conoce" id="redes" value="redes"> Redes sociales
+                    <input class="opcion" type="radio" name="conoce" id="recomen" value="recomen"> Recomendación
+                    <input class="opcion" type="radio" name="conoce" id="otro" value="otro"> Otro
+                </div>
+                <div>
+                    <input class="boton" type="submit" id="btn" name="btn" value="Enviar">
+                </div>
+            </form>
+            <div class="Mapa">
+                <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4919.446902017147!2d-58.459583583050204!3d-34.6209247161938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca224ce0296d%3A0x9a2a7eaca499b416!2sAv.%20Avellaneda%201732%2C%20C1406FYP%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1716415560644!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="local">
+                    <h3> Nos encontramos en...</h3>
+                    <p> Av. Avellaneda 1732. CABA.</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="redes">
+                <a href="https://www.facebook.com/Pharma/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com/Pharma/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/Pharma/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:pharma@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <div class="datos">
+                <p>Copyright 2024 © <b>Pharma</b> todos los derechos reservados</p>
+                <p>Diseñado por Rodrigo Matias Brizuela - Yoel Danilo Unzue - Melody Nahir Alvarez</p>
+                <p>Comision 24263 - Grupo 13</p>
+            </div>
+        </footer>     
+        <script src="static\js\validation.js"></script>
+        <script src="static\js\actions.js"></script>  
+    </body>
+</html>
